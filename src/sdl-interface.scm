@@ -9,7 +9,7 @@
 ;; @@FIXME: Implement define-foreign-struct [automagic accessors]
 ;; @@FIXME: Throw Gambit errors
 
-(include "scm-lib-macro.scm")
+(include "../include/scm-lib_.scm")
 
 (c-declare #<<end-of-c-declare
 
