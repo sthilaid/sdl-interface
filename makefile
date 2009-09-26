@@ -4,6 +4,8 @@ SRC_PATH=$(PREFIX)/src
 LIB_PATH=$(PREFIX)/lib
 EXTERNAL_LIBS=$(PREFIX)/external-libs
 
+scm-lib-PATH=git://github.com/sthilaid/scm-lib.git
+
 PATH_TO_SDL=/usr
 SDL_INCLUDE=$(PATH_TO_SDL)/include/SDL
 SDL_LIB=$(PATH_TO_SDL)/lib
@@ -36,7 +38,7 @@ setup-scm-lib:
 	mkdir -p $(LIB_PATH)
 	mkdir -p $(EXTERNAL_LIBS)
 ifeq "$(wildcard $(EXTERNAL_LIBS)/scm-lib)" ""
-	cd $(EXTERNAL_LIBS) && git clone git://github.com/sthilaid/scm-lib.git
+	cd $(EXTERNAL_LIBS) && git clone $(scm-lib-PATH)
 endif
 	cd $(EXTERNAL_LIBS)/scm-lib && git pull
 	$(MAKE) -C $(EXTERNAL_LIBS)/scm-lib
