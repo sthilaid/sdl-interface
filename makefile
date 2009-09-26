@@ -9,7 +9,7 @@ SDL_INCLUDE=$(PATH_TO_SDL)/include/SDL
 SDL_LIB=$(PATH_TO_SDL)/lib
 
 CCOPTS=-I$(SDL_INCLUDE)
-LDOPTS=-L$(SDL_LIB)
+LDOPTS=-L$(SDL_LIB) -lSDL
 
 INCLUDE_FILES=scm-lib_.scm
 LIB_FILES=scm-lib.o1 sdl-interface.o1
