@@ -4,7 +4,7 @@ SRC_PATH=$(PREFIX)/src
 LIB_PATH=$(PREFIX)/lib
 EXTERNAL_LIBS=$(PREFIX)/external-libs
 
-scm-lib-PATH=git://github.com/sthilaid/scm-lib.git
+export scm-lib-PATH=git://github.com/sthilaid/scm-lib.git
 
 PATH_TO_SDL=/usr
 SDL_INCLUDE=$(PATH_TO_SDL)/include/SDL
